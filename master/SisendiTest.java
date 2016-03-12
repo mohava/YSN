@@ -1,6 +1,6 @@
-/**
- * Created by ATM on 12/03/2016.
- */
+package master;
+
+/*** Created by ATM on 12/03/2016.*/
 import javax.swing.JOptionPane;
 public class SisendiTest {
     public static void main(String[] args) {
