@@ -7,5 +7,8 @@ public class SisendiTest {
         String sisestatakse = JOptionPane.showInputDialog(null, "Sisesta midagi ", "Andmete sisestamine",
                 JOptionPane.QUESTION_MESSAGE);
         System.out.println(sisestatakse);
+        String sisestatakse2 = JOptionPane.showInputDialog(null, "Sisesta midagi ", "Andmete sisestamine",
+                JOptionPane.QUESTION_MESSAGE);
+        System.out.println(sisestatakse2);
     }
 }
