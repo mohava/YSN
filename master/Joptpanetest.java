@@ -9,6 +9,7 @@ public class Joptpanetest {
 		JTextArea ta = new JTextArea("test pane, pls ignr\ttesttest\nUse hashtags to g");
 		ta.setEditable(false);
 		ta.setOpaque(false);
-			System.out.println(JOptionPane.showOptionDialog(null, ta , "yes", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null));
+		ta.setText("mõtlesin ümber, tahan seda texti testida\n\t\t-LE");
+		System.out.println(JOptionPane.showOptionDialog(null, ta , "yes", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null));
 	}
 }
