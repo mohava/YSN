@@ -20,9 +20,8 @@ public class EventStart extends Event {
 		this.thenEvent = thenEvent;
 	}
 	public boolean start(){
-		if (friends>friendsIf && knowledge>knowledgeIf && sanity>sanityIf && hunger>hungerIf && health>healthIf){
-			setStats(-friendsIf, -knowledgeIf, -sanityIf, -hungerIf, -healthIf);
-			thenEvent.endEvent();
+		if (friends>=friendsIf && knowledge>=knowledgeIf && sanity>=sanityIf && hunger>=hungerIf && health>=healthIf){
+			thenEvent.end();
 			return true;
 		}
 		return false;

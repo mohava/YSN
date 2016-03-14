@@ -14,11 +14,11 @@ public class EventEnd extends Event {
 		this.hungerMod = hungerMod;
 		this.healthMod = healthMod;
 	}
-	public void endEvent(){
+	public void end(){
 		friends+=friendsMod;
 		knowledge+=knowledgeMod;
 		sanity=Math.min(1.0, sanity+sanityMod);
-		hunger=Math.min(1.0, sanity+sanityMod);
+		hunger=Math.min(1.0, hunger+hungerMod);
 		health=Math.min(1.0, health+healthMod);
 	}
 }

@@ -10,6 +10,6 @@ public class Joptpanetest {
 		ta.setEditable(false);
 		ta.setOpaque(false);
 		ta.setText("mõtlesin ümber, tahan seda texti testida\n\t\t-LE");
-		System.out.println(JOptionPane.showOptionDialog(null, ta , "yes", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null));
+		System.out.println(JOptionPane.showOptionDialog(null, ta , "title", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null));
 	}
 }
