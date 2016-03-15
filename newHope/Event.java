@@ -1,18 +1,31 @@
 package newHope;
 
-public class Event {
-	public static boolean isGirl=true;
-	public static int age=0;
-	public static int friends=0;
-	public static int knowledge=0;
-	public static double sanity=1.0;
-	public static double hunger=1.0;
-	public static double health=1.0;
-	public static void setStats(int friendsM, int knowledgeM, double sanityM, double hungerM, double healthM){
-		friends+=friendsM;
-		knowledge+=knowledgeM;
-		sanity=Math.min(1.0, sanity+sanityM);
-		hunger=Math.min(1.0, sanity+sanityM);
-		health=Math.min(1.0, health+healthM);
+public class Event extends User {
+	private double ageMod;
+	private double friendsMod;
+	private double knowledgeMod;
+	private double sanityMod;
+	private double hungerMod;
+	private double healthMod;
+    public String eventName;
+
+	public Event(double[] modParameters, String eventName) {
+		super();
+        this.ageMod = modParameters[0];
+		this.friendsMod = modParameters[1];
+		this.knowledgeMod = modParameters[2];
+		this.sanityMod = modParameters[3];
+		this.hungerMod = modParameters[4];
+		this.healthMod = modParameters[5];
+        this.eventName = eventName;
+	}
+	public void launchEvent(){
+
+        age += ageMod;
+		friends+=friendsMod;
+		knowledge+=knowledgeMod;
+		sanity=Math.min(1.0, sanity+sanityMod);
+		hunger=Math.min(1.0, hunger+hungerMod);
+		health=Math.min(1.0, health+healthMod);
 	}
 }

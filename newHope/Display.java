@@ -1,25 +1,37 @@
 package newHope;
 
 import javax.swing.*;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 
 public class Display{
     String[] parameters;
     Object[] eventOptions;
-    EventStart[] events;
+    EventWithConditions[] events;
 
-    public Display(String[] parameters, Object[] eventOptions, EventStart[] events) {
+    public Display(String[] parameters, Object[] eventOptions, EventWithConditions[] events) {
         this.parameters = parameters;
         this.eventOptions = eventOptions;
         this.events = events;
     }
 
+    private Object[] findOptions(){
+        ArrayList<Object> optionsList = new ArrayList<>();
+        for(int i = 0; i <events.length; i++ ){
+            if(events[i].start()==true){
+                optionsList.add(events[i].event.eventName);
+            }
+        }
+        Object[] options = new Object[optionsList.size()];
+        options = optionsList.toArray(options);
+        return options;
+    }
+
     public static void display() throws Exception {
         System.out.println(generateLine());
-        for (int i = 0; i< 10; i++) {
-            TimeUnit.MILLISECONDS.sleep(300);
+        for (int i = 0; i< generateLine().length(); i++) {
+            TimeUnit.MILLISECONDS.sleep(20);
             System.out.print(">");
         }
         System.out.println("");
@@ -33,7 +45,7 @@ public class Display{
             ta.setEditable(false);
             ta.setOpaque(false);
             a = JOptionPane.showOptionDialog(null, ta, "title", JOptionPane.DEFAULT_OPTION,
-                    JOptionPane.QUESTION_MESSAGE, null, eventOptions, null);
+                    JOptionPane.QUESTION_MESSAGE, null, findOptions(), null);
             if (a != -1) {
                 events[a].start();
             }
@@ -41,8 +53,8 @@ public class Display{
     }
 
     public static String generateLine() {
-        return "age:"+Event.age+" friends:"+Event.friends+" knowledge:"+Event.knowledge+" " +
-                "sanity:"+Math.round(Event.sanity*100)+" hunger:"+Math.round(Event.hunger*100)+
-                " health:"+Math.round(Event.health*100);
+        return "age:"+ User.age+" friends:"+ User.friends+" knowledge:"+ User.knowledge+" " +
+                "sanity:"+Math.round(User.sanity*100)+" hunger:"+Math.round(User.hunger*100)+
+                " health:"+Math.round(User.health*100);
     }
 }
