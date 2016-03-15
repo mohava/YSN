@@ -7,9 +7,9 @@ public class Main {
 	public static void main(String[] args)throws Exception{
         FileReader fr = new FileReader();
 
-        ArrayList<EventWithConditions> eventWithConditionsArray = fr.readFromConfig();
-        EventWithConditions[] events = new EventWithConditions[eventWithConditionsArray.size()];
-        events = eventWithConditionsArray.toArray(events);
+        ArrayList<EventConditions> eventConditionsArray = fr.readFromConfig();
+        EventConditions[] events = new EventConditions[eventConditionsArray.size()];
+        events = eventConditionsArray.toArray(events);
 
 
         ArrayList<Object> optionsList = new ArrayList<>();
@@ -22,7 +22,7 @@ public class Main {
         Display dp = new Display(null, options ,events);
         dp.openDialogue();
 
-        //TODO: Kirjutada mängu sisu valmis, Event ja EventConditions klassi saab palju lühemaks siluda
+        //TODO: Kirjutada mängu sisu valmis, UserEvent ja EventConditions klassi saab palju lühemaks siluda
 
 	}
 }

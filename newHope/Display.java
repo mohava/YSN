@@ -8,9 +8,9 @@ import java.util.concurrent.TimeUnit;
 public class Display{
     String[] parameters;
     Object[] eventOptions;
-    EventWithConditions[] events;
+    EventConditions[] events;
 
-    public Display(String[] parameters, Object[] eventOptions, EventWithConditions[] events) {
+    public Display(String[] parameters, Object[] eventOptions, EventConditions[] events) {
         this.parameters = parameters;
         this.eventOptions = eventOptions;
         this.events = events;

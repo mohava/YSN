@@ -1,12 +1,10 @@
 package newHope;
 
-import javax.swing.JOptionPane;
-
-public class EventWithConditions extends User {
+public class EventConditions extends User {
     private double[] minParams;
     private double[] maxParams;
-	public Event event;
-	public EventWithConditions(double[] minParams, double[] maxParams, Event event) {
+	public UserEvent event;
+	public EventConditions(double[] minParams, double[] maxParams, UserEvent event) {
 		super();
         this.maxParams = maxParams;
         this.minParams = minParams;

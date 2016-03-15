@@ -7,12 +7,12 @@ import java.util.Scanner;
 
 
 public class FileReader {
-    public ArrayList<EventWithConditions> readFromConfig() throws Exception{
+    public ArrayList<EventConditions> readFromConfig() throws Exception{
         URL url = getClass().getResource("config.txt");
         File file = new File(url.getPath());
         Scanner sc = new Scanner(file);
 
-        ArrayList<EventWithConditions> eventWithConditionsList = new ArrayList<EventWithConditions>();
+        ArrayList<EventConditions> eventConditionsList = new ArrayList<EventConditions>();
         while (sc.hasNext()){
             String line = sc.nextLine();
             String[] blocks = line.split(";");
@@ -34,13 +34,13 @@ public class FileReader {
                     minParams[i] = Double.parseDouble(minParamsStr[i].replace(" ",""));
                 }
                 //ajutine
-                Event event = new Event(modParams, eventName);
-                EventWithConditions eventWithConditions = new EventWithConditions(minParams, maxParams, event);
-                eventWithConditionsList.add(eventWithConditions);
+                UserEvent event = new UserEvent(modParams, eventName);
+                EventConditions eventConditions = new EventConditions(minParams, maxParams, event);
+                eventConditionsList.add(eventConditions);
                 //
             }
         }
-        return eventWithConditionsList;
+        return eventConditionsList;
     }
 
 }
