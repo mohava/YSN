@@ -1,17 +1,17 @@
 package newHope;
 
+import javax.swing.JOptionPane;
+
 public class EventStart extends Event {
-	private double chance;
 	private int friendsIf;
 	private int knowledgeIf;
 	private double sanityIf;
 	private double hungerIf;
 	private double healthIf;
 	private EventEnd thenEvent;
-	public EventStart(double chance, int friendsIf, int knowledgeIf, double sanityIf, double hungerIf, double healthIf,
+	public EventStart(int friendsIf, int knowledgeIf, double sanityIf, double hungerIf, double healthIf,
 			EventEnd thenEvent) {
 		super();
-		this.chance = chance;
 		this.friendsIf = friendsIf;
 		this.knowledgeIf = knowledgeIf;
 		this.sanityIf = sanityIf;
@@ -24,6 +24,7 @@ public class EventStart extends Event {
 			thenEvent.end();
 			return true;
 		}
+		JOptionPane.showMessageDialog(null, "Seda sündmust ei saa teha", "Title", JOptionPane.INFORMATION_MESSAGE);
 		return false;
 	}
 }
