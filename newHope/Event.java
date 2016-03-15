@@ -22,7 +22,7 @@ public class Event extends User {
 	public void launchEvent(){
 
         age += ageMod;
-		friends+=friendsMod;
+        friends+=friendsMod;
 		knowledge+=knowledgeMod;
 		sanity=Math.min(1.0, sanity+sanityMod);
 		hunger=Math.min(1.0, hunger+hungerMod);

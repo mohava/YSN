@@ -22,5 +22,7 @@ public class Main {
         Display dp = new Display(null, options ,events);
         dp.openDialogue();
 
+        //TODO: Kirjutada mängu sisu valmis, Event ja EventConditions klassi saab palju lühemaks siluda
+
 	}
 }

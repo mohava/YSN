@@ -19,7 +19,7 @@ public class Display{
     private Object[] findOptions(){
         ArrayList<Object> optionsList = new ArrayList<>();
         for(int i = 0; i <events.length; i++ ){
-            if(events[i].start()==true){
+            if(events[i].check()==true){
                 optionsList.add(events[i].event.eventName);
             }
         }
