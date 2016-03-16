@@ -51,10 +51,10 @@ public class Display{
         int a = 0;
         while (a!=-1) {
             display();
-            JTextArea ta = new JTextArea("Vali üks");
+            JTextArea ta = new JTextArea("Vali Ã¼ks");
             ta.setEditable(false);
             ta.setOpaque(false);
-            a = JOptionPane.showOptionDialog(null, ta, "ÜSN", JOptionPane.DEFAULT_OPTION,
+            a = JOptionPane.showOptionDialog(null, ta, "ÃœSN", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null, findOptions(), null);
             if (a != -1) {
                 currentEvents[a].start();
