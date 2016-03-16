@@ -20,7 +20,6 @@ public class UserEvent extends User {
         this.eventName = eventName;
 	}
 	public void launchEvent(){
-
         age += ageMod;
         friends+=friendsMod;
 		knowledge+=knowledgeMod;

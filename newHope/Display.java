@@ -47,6 +47,8 @@ public class Display{
             a = JOptionPane.showOptionDialog(null, ta, "title", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null, findOptions(), null);
             if (a != -1) {
+            	while(!events[a].check())
+            		a++;
                 events[a].start();
             }
         }
