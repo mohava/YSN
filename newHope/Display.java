@@ -69,8 +69,8 @@ public class Display{
     }
 
     public static String generateLine() {
-        return "age:"+ User.age+" friends:"+ User.friends+" knowledge:"+ User.knowledge+" money:"+User.money+
-        		" sanity:"+Math.round(User.sanity*100)+" hunger:"+Math.round(User.hunger*100)+
-                " health:"+Math.round(User.health*100);
+        return "Vanus:"+ User.age+" Sõbrad:"+ User.friends+" Teadmised:"+ User.knowledge+" Raha:"+User.money+
+        		" Mõistus:"+Math.round(User.sanity*100)+" Nälg:"+Math.round(User.hunger*100)+
+                " Tervis:"+Math.round(User.health*100);
     }
 }
