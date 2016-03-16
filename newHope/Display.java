@@ -41,7 +41,7 @@ public class Display{
     public static void display() throws Exception {
         System.out.println(generateLine());
         for (int i = 0; i< generateLine().length(); i++) {
-            TimeUnit.MILLISECONDS.sleep(20);
+            TimeUnit.MILLISECONDS.sleep(10);
             System.out.print(">");
         }
         System.out.println("");
