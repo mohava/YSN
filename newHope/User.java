@@ -5,6 +5,7 @@ public class User {
 	public static double age=0;
 	public static double friends=0;
 	public static double knowledge=0;
+	public static double money=0;
 	public static double sanity=1.0;
 	public static double hunger=1.0;
 	public static double health=1.0;

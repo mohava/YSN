@@ -12,8 +12,8 @@ public class EventConditions extends User {
 	}
     public boolean check(){
         return age>=minParams[0]&&age<=maxParams[0]&&friends>=minParams[1]&&friends<=maxParams[1]&&knowledge>=minParams[2]&&
-                knowledge<=maxParams[2]&&sanity>=minParams[3]&&sanity<=maxParams[3]&&hunger>=minParams[4]&&hunger<=maxParams[4]&&
-                health>=minParams[5]&&health<=maxParams[5];
+                knowledge<=maxParams[2]&&money>=minParams[3]&&money<=maxParams[3]&&sanity>=minParams[4]&&sanity<=maxParams[4]&&hunger>=minParams[5]&&hunger<=maxParams[5]&&
+                health>=minParams[6]&&health<=maxParams[6];
     }
 
 	public boolean start(){

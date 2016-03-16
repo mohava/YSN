@@ -51,10 +51,10 @@ public class Display{
         int a = 0;
         while (a!=-1) {
             display();
-            JTextArea ta = new JTextArea("Choose one");
+            JTextArea ta = new JTextArea("Vali üks");
             ta.setEditable(false);
             ta.setOpaque(false);
-            a = JOptionPane.showOptionDialog(null, ta, "title", JOptionPane.DEFAULT_OPTION,
+            a = JOptionPane.showOptionDialog(null, ta, "ÜSN", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null, findOptions(), null);
             if (a != -1) {
                 currentEvents[a].start();
@@ -63,8 +63,8 @@ public class Display{
     }
 
     public static String generateLine() {
-        return "age:"+ User.age+" friends:"+ User.friends+" knowledge:"+ User.knowledge+" " +
-                "sanity:"+Math.round(User.sanity*100)+" hunger:"+Math.round(User.hunger*100)+
+        return "age:"+ User.age+" friends:"+ User.friends+" knowledge:"+ User.knowledge+" money:"+User.money+
+        		" sanity:"+Math.round(User.sanity*100)+" hunger:"+Math.round(User.hunger*100)+
                 " health:"+Math.round(User.health*100);
     }
 }
