@@ -9,6 +9,7 @@ public class Display{
     String[] parameters;
     Object[] eventOptions;
     EventConditions[] events;
+    EventConditions[] currentEvents;
 
     public Display(String[] parameters, Object[] eventOptions, EventConditions[] events) {
         this.parameters = parameters;
@@ -17,14 +18,18 @@ public class Display{
     }
 
     private Object[] findOptions(){
+    	ArrayList<EventConditions> tempEvents = new ArrayList<EventConditions>();
         ArrayList<Object> optionsList = new ArrayList<>();
         for(int i = 0; i <events.length; i++ ){
             if(events[i].check()==true){
                 optionsList.add(events[i].event.eventName);
+                tempEvents.add(events[i]);
             }
         }
         Object[] options = new Object[optionsList.size()];
+        currentEvents = new EventConditions[tempEvents.size()];
         options = optionsList.toArray(options);
+        currentEvents = tempEvents.toArray(currentEvents);
         return options;
     }
 
@@ -47,9 +52,7 @@ public class Display{
             a = JOptionPane.showOptionDialog(null, ta, "title", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null, findOptions(), null);
             if (a != -1) {
-            	while(!events[a].check())
-            		a++;
-                events[a].start();
+                currentEvents[a].start();
             }
         }
     }
