@@ -26,6 +26,11 @@ public class Display{
                 tempEvents.add(events[i]);
             }
         }
+        while (optionsList.size()>3){
+        	int i=(int)(Math.random()*optionsList.size());
+        	optionsList.remove(i);
+        	tempEvents.remove(i);
+        }
         Object[] options = new Object[optionsList.size()];
         currentEvents = new EventConditions[tempEvents.size()];
         options = optionsList.toArray(options);
