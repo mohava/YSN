@@ -70,7 +70,7 @@ public class Display{
 
     public static String generateLine() {
         return "Vanus:"+ User.age+" Sõbrad:"+ User.friends+" Teadmised:"+ User.knowledge+" Raha:"+User.money+
-        		" Mõistus:"+Math.round(User.sanity*100)+" Nälg:"+Math.round(User.hunger*100)+
+        		" Mõistus:"+Math.round(User.sanity*100)+" Kõht täis:"+Math.round(User.hunger*100)+
                 " Tervis:"+Math.round(User.health*100);
     }
 }

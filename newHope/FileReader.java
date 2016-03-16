@@ -19,6 +19,7 @@ public class FileReader {
 
             if(!blocks[0].contains("//")) {
                 String eventName = blocks[0];
+                //System.out.println(eventName);
                 String[] maxParamsStr = blocks[1].split(",");
                 String[] modParamsStr = blocks[2].split(",");
                 String[] minParamsStr = blocks[3].split(",");
