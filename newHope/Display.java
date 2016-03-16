@@ -51,13 +51,19 @@ public class Display{
         int a = 0;
         while (a!=-1) {
             display();
-            JTextArea ta = new JTextArea("Vali üks");
-            ta.setEditable(false);
-            ta.setOpaque(false);
-            a = JOptionPane.showOptionDialog(null, ta, "ÜSN", JOptionPane.DEFAULT_OPTION,
-                    JOptionPane.QUESTION_MESSAGE, null, findOptions(), null);
-            if (a != -1) {
-                currentEvents[a].start();
+            Object[] temp = findOptions();
+            if (temp.length>0){
+	            JTextArea ta = new JTextArea("Vali üks");
+	            ta.setEditable(false);
+	            ta.setOpaque(false);
+	            a = JOptionPane.showOptionDialog(null, ta, "ÜSN", JOptionPane.DEFAULT_OPTION,
+	                    JOptionPane.QUESTION_MESSAGE, null, temp, null);
+	            if (a != -1) {
+	                currentEvents[a].start();   
+	            }
+            }else{
+            	JOptionPane.showMessageDialog(null, "Sa surid ära", "ÜSN", JOptionPane.INFORMATION_MESSAGE);
+            	User.reset();
             }
         }
     }
