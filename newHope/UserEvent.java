@@ -24,10 +24,10 @@ public class UserEvent extends User {
 	public void launchEvent(){
         age += ageMod;
         friends+=friendsMod;
-		knowledge+=knowledgeMod;
-		money+=moneyMod;
-		sanity=Math.min(1.0, sanity+sanityMod);
-		hunger=Math.min(1.0, hunger+hungerMod);
-		health=Math.min(1.0, health+healthMod);
+		knowledge+=	(Math.random()*0.2+0.9)*knowledgeMod;
+		money+=(Math.random()*0.2+0.9)*moneyMod;
+		sanity=Math.min(1.0, sanity+(Math.random()*0.2+0.9)*sanityMod);
+		hunger=Math.min(1.0, hunger+(Math.random()*0.2+0.9)*hungerMod);
+		health=Math.min(1.0, health+(Math.random()*0.2+0.9)*healthMod);
 	}
 }
